@@ -135,6 +135,7 @@ button {
     border: none;
     padding: 0;
     cursor: pointer;
+    align-self: center;
 
     img{
         width: 38px;  
@@ -152,6 +153,10 @@ button {
         font-family: "Oooh Baby", cursive;
         font-size: 25px;
         padding-left: 2%;
+
+        div{
+            margin-top: 3%;
+        }
 
     }
 }
