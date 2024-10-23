@@ -1,8 +1,39 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+:root{
+    --primary-red: #df0714;
+    --primary-bg: #fdeeeb;
+    --pink-d: #ffb5cd;
+    --pink-l: #ffd2e1;
+    --white: #ffffff;
+    --pink-xd: hotpink;
+}
+
+
+html, body{
+    background-color: var(--primary-bg);
+    color: var(--pink-xd);
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+    height: 100%;
+   
+}
+
+h1, h2{
+    font-family: "Playwrite DK Loopet", cursive;
+}
+
+p{
+    font-family: "Oooh Baby", cursive;
+}
+
+h1{
+    font-size: 60px;;
 }
 
 .app-container {
@@ -17,14 +48,51 @@ h1, h2 {
     text-align: center;
 }
 
-.input-container {
+.input_container {
     display: flex;
-align-items: center;    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 20px;
+    width: 100%; 
 }
 
 input, button {
     padding: 10px;
     margin: 0 5px;
+    font-family: "Oooh Baby", cursive;
+    font-size: 25px;
+    font-weight: bold;
+    border: solid 3.5px var(--pink-d);
+}
+
+input{
+    border-radius: 3em;
+    background-color: var(--white);
+}
+
+input::placeholder {
+    color: var(--pink-d);
+    opacity: 0.8; 
+}
+
+input:focus{
+    border-color:var(--pink-d);
+    color: var(--pink-xd);
+    outline: none;
+}
+
+
+#add_task_btn{
+    border-radius: 3em;
+    background-color: var(--pink-l);
+   
+    color: var(--white);
+}
+
+#add_task_btn:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+
 }
 
 ul {
@@ -39,13 +107,62 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
+    border-radius: 3em;
+    border: solid 3.5px var(--pink-d);
+
 }
 
 button {
     cursor: pointer;
+    
 }
 
 .done {
     text-decoration: line-through;
 }
+
+.done_container, .todo_container{
+    button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    img{
+        width: 38px;  
+        height: 38px;
+    }
+    img:hover{
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    }
+
+    li{
+        min-width:250px;
+        max-width: 500px;
+        font-family: "Oooh Baby", cursive;
+        font-size: 25px;
+        padding-left: 2%;
+
+    }
+}
+
+#todo_list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1%;
+
+}
+
+#done_list{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+

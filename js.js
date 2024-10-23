@@ -32,8 +32,12 @@ document.addEventListener('DOMContentLoaded', function(){
         li.innerHTML = `
             <span>${task.task}</span>
             <div>
-                <button class="done-btn">${isDone ? 'Fortryd' : 'Færdig'}</button>
-                <button class="delete-btn">Slet</button>
+            <button class="done-btn">
+                <img src="/img/${isDone ? 'undo_btn.png' : 'done_btn.png'}" alt="${isDone ? 'Fortryd' : 'Færdig'}">
+            </button>
+            <button class="delete-btn">
+                <img src="img/delete_btn.png" alt="Slet">
+            </button>
             </div>
         `;
 
